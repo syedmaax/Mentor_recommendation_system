@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Dashboard - Chat with Mentees</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, Mentor</h1>
+        <p>Below are the mentees who have paid for your services. Click on a name to start a chat.</p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <div id="paidMenteesList" class="mentee-list">
+        <h2>Your Mentees</h2>
+        <ul>
+            <!-- List of mentees who have paid -->
+            <li onclick="openChatBox('John Doe')">John Doe</li>
+            <li onclick="openChatBox('Jane Smith')">Jane Smith</li>
+            <li onclick="openChatBox('Alex Johnson')">Alex Johnson</li>
+        </ul>
+    </div>
+
+    <!-- Chat Box for each mentee -->
+    <div id="chatBox" class="chat-box" style="display:none;">
+        <h3>Chat with <span id="menteeName"></span></h3>
+        <div id="chatMessages" class="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        <input type="text" id="chatInput" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
