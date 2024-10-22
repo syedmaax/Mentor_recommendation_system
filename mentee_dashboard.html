@@ -10,11 +10,13 @@
     <header>
         <h1>Recommended Mentors</h1>
         <p>Here are some mentors we recommend for you:</p>
-        <button class="logout-button" onclick="logout()">Logout</button>
+        <nav>
+            <a href="mentee_paid_mentors.html" class="nav-link">Your Paid Mentors</a>
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </nav>
     </header>
 
     <div id="mentorRecommendations" class="mentor-list">
-        <!-- Example of recommended mentors -->
         <div class="mentor-card">
             <img src="mentor1.jpg" alt="Dr. Anna Johnson" class="mentor-img">
             <h3 class="mentor-name">Dr. Anna Johnson</h3>
@@ -34,43 +36,6 @@
             <button class="mentor-button" onclick="viewProfile('mentor3')">View Profile</button>
         </div>
         <!-- Add more recommended mentors as needed -->
-    </div>
-
-    <h2>Your Paid Mentors</h2>
-    <div class="mentor-list">
-        <!-- Example of a paid mentor card -->
-        <div class="mentor-card">
-            <img src="mentor1.jpg" alt="Mentor 1" class="mentor-img">
-            <div class="mentor-name">Anna</div>
-            <div class="mentor-expertise">Expertise: Web Development</div>
-            <button class="mentor-button" onclick="openChatBox('Mentor 1')">Chat</button>
-            <button class="mentor-button" onclick="viewProfile('mentor1')">View Profile</button>
-        </div>
-        <div class="mentor-card">
-            <img src="mentor2.jpg" alt="Mentor 2" class="mentor-img">
-            <div class="mentor-name">Bob</div>
-            <div class="mentor-expertise">Expertise: Mobile Development</div>
-            <button class="mentor-button" onclick="openChatBox('Mentor 2')">Chat</button>
-            <button class="mentor-button" onclick="viewProfile('mentor2')">View Profile</button>
-        </div>
-        <div class="mentor-card">
-            <img src="mentor3.jpg" alt="Mentor 3" class="mentor-img">
-            <div class="mentor-name">John</div>
-            <div class="mentor-expertise">Expertise: Cybersecurity</div>
-            <button class="mentor-button" onclick="openChatBox('Mentor 3')">Chat</button>
-            <button class="mentor-button" onclick="viewProfile('mentor3')">View Profile</button>
-        </div>
-        <!-- Repeat for other paid mentors -->
-    </div>
-
-    <!-- Chat Box for mentee -->
-    <div id="chatBox" class="chat-box" style="display:none;">
-        <h3>Chat with <span id="mentorName"></span></h3>
-        <div id="chatMessages" class="chat-messages">
-            <!-- Messages will appear here -->
-        </div>
-        <input type="text" id="chatInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
     </div>
 
     <script src="script.js"></script>

@@ -8,18 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Your Mentors</h1>
-        <p>These are the mentors you’ve paid for services. Click to chat with them.</p>
+        <h1>Your Paid Mentors</h1>
+        <p>Click on a mentor's name to start a chat with them.</p>
         <button class="logout-button" onclick="logout()">Logout</button>
     </header>
 
     <div id="paidMentorsList" class="mentor-list">
-        <ul>
-            <!-- List of mentors whom the mentee has paid -->
-            <li onclick="openChatBox('Dr. Anna Johnson')">Dr. Anna Johnson</li>
-            <li onclick="openChatBox('Prof. Mark Smith')">Prof. Mark Smith</li>
-            <!-- Add more mentors dynamically -->
-        </ul>
+        <div class="mentor-card" onclick="openChatBox('Dr. Anna Johnson')">
+            <img src="mentor1.jpg" alt="Dr. Anna Johnson" class="mentor-img">
+            <h3 class="mentor-name">Dr. Anna Johnson</h3>
+            <p class="mentor-expertise">Expertise: Data Science</p>
+            <button class="mentor-button" onclick="openChatBox('Dr. Anna Johnson')">Chat</button>
+        </div>
+        <div class="mentor-card" onclick="openChatBox('Prof. Mark Smith')">
+            <img src="mentor2.jpg" alt="Prof. Mark Smith" class="mentor-img">
+            <h3 class="mentor-name">Prof. Mark Smith</h3>
+            <p class="mentor-expertise">Expertise: Machine Learning</p>
+            <button class="mentor-button" onclick="openChatBox('Prof. Mark Smith')">Chat</button>
+        </div>
+        <!-- Add more paid mentors similarly -->
     </div>
 
     <!-- Chat Box for mentee -->
@@ -28,7 +35,7 @@
         <div id="chatMessages" class="chat-messages">
             <!-- Messages will appear here -->
         </div>
-        <input type="text" id="chatInput" placeholder="Type a message..." />
+        <input type="text" id="chatInput" placeholder="Type a message...">
         <button onclick="sendMessage()">Send</button>
     </div>
 
