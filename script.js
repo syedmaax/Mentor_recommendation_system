@@ -70,5 +70,5 @@ function viewProfile(mentorId) {
 // Logout functionality
 function logout() {
     localStorage.removeItem('userRole'); // Clear the login state
-    window.location.href = "login.html"; // Redirect to login
+    window.location.href = "index.html"; // Redirect to login
 }
