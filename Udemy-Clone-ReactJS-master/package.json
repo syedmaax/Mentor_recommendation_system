@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ahmedgamal2212.github.io/Udemy-Clone-ReactJS/",
+  "homepage": "https://syedmaax.github.io/Mentor_recommendation_system",
   "name": "udemy-home-page",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +19,7 @@
     "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.4",
     "react-stickynode": "^4.1.0",
+    "udemy-home-page": "file:",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
