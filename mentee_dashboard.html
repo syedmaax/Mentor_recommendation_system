@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentee Dashboard - Recommended Mentors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mentee Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Recommended Mentors</h1>
-        <p>Here are some mentors we recommend for you:</p>
-        <nav>
-            <a href="mentee_paid_mentors.html" class="nav-link">Your Paid Mentors</a>
-            <button class="logout-button" onclick="logout()">Logout</button>
-        </nav>
+<body class="bg-gray-100">
+    <header class="bg-white p-6 shadow">
+        <h1 class="text-3xl font-semibold text-center">Recommended Mentors</h1>
     </header>
-
-    <div id="mentorRecommendations" class="mentor-list">
-        <div class="mentor-card">
-            <img src="mentor1.jpg" alt="Dr. Anna Johnson" class="mentor-img">
-            <h3 class="mentor-name">Dr. Anna Johnson</h3>
-            <p class="mentor-expertise">Expertise: Data Science</p>
-            <button class="mentor-button" onclick="viewProfile('mentor1')">View Profile</button>
+    <div class="max-w-6xl mx-auto py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Sample Mentor Cards -->
+            <div class="bg-white p-4 rounded-lg shadow transition transform hover:scale-105">
+                <h3 class="text-xl font-semibold">Dr. Anna Johnson</h3>
+                <p class="text-gray-600">Experience: 10 years</p>
+                <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
+                <button class="bg-yellow-500 text-white p-2 rounded mt-2 hover:bg-yellow-600 transition duration-300" onclick="viewProfile('1')">View Profile</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow transition transform hover:scale-105">
+                <h3 class="text-xl font-semibold">Mr. John Doe</h3>
+                <p class="text-gray-600">Experience: 5 years</p>
+                <p class="text-gray-600">Rating: ⭐⭐⭐⭐</p>
+                <button class="bg-yellow-500 text-white p-2 rounded mt-2 hover:bg-yellow-600 transition duration-300" onclick="viewProfile('2')">View Profile</button>
+            </div>
+            <!-- Add more mentor cards dynamically -->
         </div>
-        <div class="mentor-card">
-            <img src="mentor2.jpg" alt="Mr. John Doe" class="mentor-img">
-            <h3 class="mentor-name">Mr. John Doe</h3>
-            <p class="mentor-expertise">Expertise: Web Development</p>
-            <button class="mentor-button" onclick="viewProfile('mentor2')">View Profile</button>
-        </div>
-        <div class="mentor-card">
-            <img src="mentor3.jpg" alt="Ms. Sarah Smith" class="mentor-img">
-            <h3 class="mentor-name">Ms. Sarah Smith</h3>
-            <p class="mentor-expertise">Expertise: Graphic Design</p>
-            <button class="mentor-button" onclick="viewProfile('mentor3')">View Profile</button>
-        </div>
-        <!-- Add more recommended mentors as needed -->
     </div>
-
+    <div class="flex justify-center space-x-4 p-4">
+        <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-300" onclick="location.href='mentee_paid_mentors.html'">Paid Mentors</button>
+        <button class="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-300" onclick="logout()">Logout</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

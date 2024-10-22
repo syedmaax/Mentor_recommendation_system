@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentee - Your Paid Mentors</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Paid Mentors</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Your Paid Mentors</h1>
-        <p>Click on a mentor's name to start a chat with them.</p>
-        <button class="logout-button" onclick="logout()">Logout</button>
+<body class="bg-gray-100">
+    <header class="bg-white p-6 shadow">
+        <h1 class="text-3xl font-semibold text-center">Your Paid Mentors</h1>
     </header>
-
-    <div id="paidMentorsList" class="mentor-list">
-        <div class="mentor-card" onclick="openChatBox('Dr. Anna Johnson')">
-            <img src="mentor1.jpg" alt="Dr. Anna Johnson" class="mentor-img">
-            <h3 class="mentor-name">Dr. Anna Johnson</h3>
-            <p class="mentor-expertise">Expertise: Data Science</p>
-            <button class="mentor-button" onclick="openChatBox('Dr. Anna Johnson')">Chat</button>
+    <div class="max-w-6xl mx-auto py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Sample Paid Mentor Cards -->
+            <div class="bg-white p-4 rounded-lg shadow transition transform hover:scale-105">
+                <h3 class="text-xl font-semibold">Prof. Mark Smith</h3>
+                <button class="bg-blue-500 text-white p-2 rounded mt-2 hover:bg-blue-600 transition duration-300" onclick="openChatBox('Prof. Mark Smith')">Chat</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow transition transform hover:scale-105">
+                <h3 class="text-xl font-semibold">Dr. Emily Davis</h3>
+                <button class="bg-blue-500 text-white p-2 rounded mt-2 hover:bg-blue-600 transition duration-300" onclick="openChatBox('Dr. Emily Davis')">Chat</button>
+            </div>
+            <!-- Add more paid mentor cards dynamically -->
         </div>
-        <div class="mentor-card" onclick="openChatBox('Prof. Mark Smith')">
-            <img src="mentor2.jpg" alt="Prof. Mark Smith" class="mentor-img">
-            <h3 class="mentor-name">Prof. Mark Smith</h3>
-            <p class="mentor-expertise">Expertise: Machine Learning</p>
-            <button class="mentor-button" onclick="openChatBox('Prof. Mark Smith')">Chat</button>
-        </div>
-        <!-- Add more paid mentors similarly -->
     </div>
-
-    <!-- Chat Box for mentee -->
-    <div id="chatBox" class="chat-box" style="display:none;">
-        <h3>Chat with <span id="mentorName"></span></h3>
-        <div id="chatMessages" class="chat-messages">
-            <!-- Messages will appear here -->
-        </div>
-        <input type="text" id="chatInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
+    <div class="flex justify-center space-x-4 p-4">
+        <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition duration-300" onclick="location.href='mentee_dashboard.html'">Recommended Mentors</button>
+        <button class="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-300" onclick="logout()">Logout</button>
     </div>
-
+    
+    <!-- Chat Box -->
+    <div id="chatBox" class="fixed bottom-0 right-0 m-4 w-80 bg-white border border-gray-300 rounded-lg shadow-lg p-4 hidden">
+        <h3 class="text-lg font-semibold">Chat with <span id="mentorName" class="text-blue-500"></span></h3>
+        <div id="chatMessages" class="h-40 overflow-y-auto border-b border-gray-300 mb-2"></div>
+        <input type="text" id="chatInput" placeholder="Type a message..." class="border border-gray-300 p-2 w-full rounded focus:outline-none focus:ring focus:ring-blue-300">
+        <button class="bg-blue-500 text-white p-2 rounded mt-2 hover:bg-blue-600 transition duration-300" onclick="sendMessage()">Send</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

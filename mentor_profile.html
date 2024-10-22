@@ -4,47 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentor Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="profile-container">
-        <h2 id="mentorName">Mentor Name</h2>
-        <img src="mentor1.jpg" alt="Mentor 1" class="mentor-img">
-        <p><strong>Rating:</strong> <span id="mentorRating">4.5</span></p>
-        <p><strong>Experience:</strong> <span id="mentorExperience">5 years</span></p>
-        <p><strong>Expertise:</strong> <span id="mentorExpertise">Web Development, JavaScript</span></p>
-        <button class="mentor-button" onclick="openChatBox('Mentor 1')">Chat</button>
-        <button class="logout-button" onclick="logout()">Logout</button>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Mentor Profile</h2>
+        <div class="mb-4">
+            <div class="flex flex-col items-center">
+                <img src="mentor-image.jpg" alt="Mentor Name" class="w-24 h-24 rounded-full mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Mentor Name</h3>
+                <p class="text-gray-600">Expertise: Software Development</p>
+                <p class="text-gray-600">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                <p class="text-gray-600">Experience: 5 years</p>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h4 class="font-semibold text-gray-800">About Me:</h4>
+            <p class="text-gray-600">I am a passionate software developer with a knack for teaching. I love helping students understand complex concepts and turn them into practical skills.</p>
+        </div>
+        <button class="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600 transition duration-300">Chat with Mentor</button>
+        <button class="mt-2 bg-yellow-500 text-white p-2 rounded w-full hover:bg-yellow-600 transition duration-300">View Other Profiles</button>
     </div>
-
-    <script>
-        // Simulate fetching mentor data
-        const urlParams = new URLSearchParams(window.location.search);
-        const mentorId = urlParams.get('mentor');
-
-        // Check if mentorId exists and update mentor information
-        if (mentorId) {
-            switch (mentorId) {
-                case 'mentor1':
-                    document.getElementById('mentorName').innerText = 'Mentor 1';
-                    document.getElementById('mentorRating').innerText = '4.5';
-                    document.getElementById('mentorExperience').innerText = '5 years';
-                    document.getElementById('mentorExpertise').innerText = 'Web Development, JavaScript';
-                    break;
-                case 'mentor2':
-                    document.getElementById('mentorName').innerText = 'Mentor 2';
-                    document.getElementById('mentorRating').innerText = '4.7';
-                    document.getElementById('mentorExperience').innerText = '6 years';
-                    document.getElementById('mentorExpertise').innerText = 'Data Science, Python';
-                    break;
-                // Add more cases for additional mentors as needed
-                default:
-                    document.getElementById('mentorName').innerText = 'Mentor Not Found';
-                    break;
-            }
-        } else {
-            document.getElementById('mentorName').innerText = 'Mentor Not Found';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

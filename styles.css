@@ -26,18 +26,18 @@ h2 {
     color: #333;
 }
 
-/* Mentee List Styles */
-.mentee-list {
+/* Mentee and Mentor Lists Styles */
+.list-container {
     margin: 0 auto;
 }
 
-.mentor-list {
+.mentor-list, .mentee-list {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
     gap: 15px; /* Space between cards */
 }
 
-.mentor-card {
+.mentor-card, .mentee-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -47,17 +47,17 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mentor-card:hover {
+.mentor-card:hover, .mentee-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.mentor-info h3 {
+.mentor-info h3, .mentee-info h3 {
     font-size: 1.5rem;
     color: #333;
 }
 
-.mentor-info p {
+.mentor-info p, .mentee-info p {
     color: #555;
 }
 
@@ -148,6 +148,7 @@ h2 {
     display: none; /* Hidden by default */
 }
 
+/* Chat Input Styles */
 input#chatInput {
     width: 100%;
     padding: 10px;
@@ -223,4 +224,11 @@ nav {
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mentor-list, .mentee-list {
+        flex-direction: column; /* Stack cards on smaller screens */
+    }
 }
